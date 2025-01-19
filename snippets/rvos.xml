@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+
+  <remote  name="RvOS"
+      fetch="https://github.com/RvOS-AOSP"
+           revision="refs/heads/fifteen" />
+
+  <remote  name="PixelOS-Gitlab"
+           fetch="https://gitlab.com/PixelOS-AOSP"
+           revision="refs/heads/fifteen" />
+
+  <!-- AOSP additions -->
+  <project path="bionic" name="bionic" groups="pdk" remote="RvOS" />
+  <project path="bootable/recovery" name="bootable_recovery" groups="pdk" remote="RvOS" />
+  <project path="build/make" name="build" groups="pdk" remote="RvOS">
+    <linkfile src="CleanSpec.mk" dest="build/CleanSpec.mk" />
+    <linkfile src="buildspec.mk.default" dest="build/buildspec.mk.default" />
+    <linkfile src="core" dest="build/core" />
+    <linkfile src="envsetup.sh" dest="build/envsetup.sh" />
+    <linkfile src="target" dest="build/target" />
+    <linkfile src="tools" dest="build/tools" />
+  </project>
+  <project path="build/soong" name="build_soong" groups="pdk,tradefed" remote="RvOS">
+    <linkfile src="root.bp" dest="Android.bp" />
+    <linkfile src="bootstrap.bash" dest="bootstrap.bash" />
+  </project>
+  <project path="frameworks/av" name="frameworks_av" groups="pdk" remote="RvOS" />
+  <project path="frameworks/base" name="frameworks_base" groups="pdk-cw-fs,pdk-fs" remote="RvOS" />
+  <project path="frameworks/native" name="frameworks_native" groups="pdk" remote="RvOS" />
+  <project path="packages/apps/Settings" name="packages_apps_Settings" groups="pdk-fs" remote="RvOS" />
+  <project path="packages/modules/Connectivity" name="packages_modules_Connectivity" groups="pdk" remote="RvOS" />
+  <project path="packages/services/Telecomm" name="packages_services_Telecomm" remote="RvOS" />
+  <project path="system/core" name="system_core" groups="pdk" remote="RvOS" />
+
+  <!-- Custom vendor additions -->
+  <project path="device/lineage/sepolicy" name="device_lineage_sepolicy" remote="RvOS" />
+  <project path="packages/apps/ParanoidSense" name="packages_apps_ParanoidSense" remote="RvOS" />
+  <project path="packages/apps/TouchGestures" name="packages_apps_TouchGestures" remote="RvOS" />
+  <project path="packages/apps/Updater" name="packages_apps_Updater" remote="RvOS" />
+  <project path="vendor/rvos" name="vendor_rvos" remote="RvOS" />
+  <project path="vendor/custom-preference" name="vendor_custom-preference" remote="RvOS" />
+  <project path="vendor/gms" name="vendor_gms" clone-depth="1" remote="PixelOS-Gitlab" />
+  <project path="vendor/google/overlays/ThemeIcons" name="vendor_google_overlays_ThemeIcons" remote="RvOS" />
+
+</manifest>

@@ -1412,7 +1412,7 @@
   <!-- END open-source projects -->
 
   <include name="snippets/remove.xml" />
-  <include name="snippets/custom.xml" />
+  <include name="snippets/rvos.xml" />
   <include name="snippets/lineage.xml" />
 
 </manifest>

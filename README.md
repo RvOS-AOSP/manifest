@@ -20,6 +20,7 @@ repo sync
 ## RvOS Flags
 ```Makefile
 RVOS_MAINTAINER := Rve
+TARGET_SUPPORTS_QUICK_TAP := true/false
 TARGET_FACE_UNLOCK_SUPPORTED := true/false
 ```
 

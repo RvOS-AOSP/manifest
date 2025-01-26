@@ -40,6 +40,7 @@
   <project path="vendor/rvos" name="vendor_rvos" remote="RvOS" />
   <project path="vendor/rvos-pif" name="vendor_rvos-pif" remote="RvOS" />
   <project path="vendor/custom-preference" name="vendor_custom-preference" remote="RvOS" />
+  <project path="packages/apps/ColumbusService" name="packages_apps_ColumbusService" remote="RvOS" />
   <project path="vendor/gms" name="vendor_gms" clone-depth="1" remote="PixelOS-Gitlab" />
   <project path="vendor/google/overlays/ThemeIcons" name="vendor_google_overlays_ThemeIcons" remote="RvOS" />
 

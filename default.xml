@@ -1414,5 +1414,6 @@
   <include name="snippets/remove.xml" />
   <include name="snippets/rvos.xml" />
   <include name="snippets/lineage.xml" />
+  <include name="snippets/custom.xml" />
 
 </manifest>
